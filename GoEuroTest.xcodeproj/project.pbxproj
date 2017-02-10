@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		0D1643F61E4DFF1F00156619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643F51E4DFF1F00156619 /* main.m */; };
 		0D1643F91E4DFF1F00156619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643F81E4DFF1F00156619 /* AppDelegate.m */; };
-		0D1643FC1E4DFF1F00156619 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643FB1E4DFF1F00156619 /* ViewController.m */; };
+		0D1643FC1E4DFF1F00156619 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643FB1E4DFF1F00156619 /* MainViewController.m */; };
 		0D1643FF1E4DFF1F00156619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1643FD1E4DFF1F00156619 /* Main.storyboard */; };
 		0D1644011E4DFF1F00156619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1644001E4DFF1F00156619 /* Assets.xcassets */; };
 		0D1644041E4DFF1F00156619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1644021E4DFF1F00156619 /* LaunchScreen.storyboard */; };
 		0D16440F1E4DFF1F00156619 /* GoEuroTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D16440E1E4DFF1F00156619 /* GoEuroTestTests.m */; };
+		0D16441C1E4E041700156619 /* TimeTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D16441B1E4E041700156619 /* TimeTableService.swift */; };
+		0D1644201E4E049B00156619 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0D16441F1E4E049B00156619 /* Cartfile */; };
+		0D1644261E4E05A100156619 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644221E4E05A100156619 /* Alamofire.framework */; };
+		0D1644271E4E05A100156619 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644231E4E05A100156619 /* Realm.framework */; };
+		0D1644281E4E05A100156619 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644241E4E05A100156619 /* RealmSwift.framework */; };
+		0D1644291E4E05A100156619 /* SwiftOverlays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644251E4E05A100156619 /* SwiftOverlays.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +37,8 @@
 		0D1643F51E4DFF1F00156619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D1643F71E4DFF1F00156619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D1643F81E4DFF1F00156619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0D1643FA1E4DFF1F00156619 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0D1643FB1E4DFF1F00156619 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0D1643FA1E4DFF1F00156619 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0D1643FB1E4DFF1F00156619 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		0D1643FE1E4DFF1F00156619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D1644001E4DFF1F00156619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D1644031E4DFF1F00156619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +46,13 @@
 		0D16440A1E4DFF1F00156619 /* GoEuroTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoEuroTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D16440E1E4DFF1F00156619 /* GoEuroTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoEuroTestTests.m; sourceTree = "<group>"; };
 		0D1644101E4DFF1F00156619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D16441A1E4E041700156619 /* GoEuroTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoEuroTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D16441B1E4E041700156619 /* TimeTableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableService.swift; sourceTree = "<group>"; };
+		0D16441F1E4E049B00156619 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		0D1644221E4E05A100156619 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		0D1644231E4E05A100156619 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		0D1644241E4E05A100156619 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		0D1644251E4E05A100156619 /* SwiftOverlays.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftOverlays.framework; path = Carthage/Build/iOS/SwiftOverlays.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1644271E4E05A100156619 /* Realm.framework in Frameworks */,
+				0D1644291E4E05A100156619 /* SwiftOverlays.framework in Frameworks */,
+				0D1644261E4E05A100156619 /* Alamofire.framework in Frameworks */,
+				0D1644281E4E05A100156619 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 		0D1643E81E4DFF1F00156619 = {
 			isa = PBXGroup;
 			children = (
+				0D16441F1E4E049B00156619 /* Cartfile */,
 				0D1643F31E4DFF1F00156619 /* GoEuroTest */,
 				0D16440D1E4DFF1F00156619 /* GoEuroTestTests */,
 				0D1643F21E4DFF1F00156619 /* Products */,
@@ -81,10 +99,12 @@
 		0D1643F31E4DFF1F00156619 /* GoEuroTest */ = {
 			isa = PBXGroup;
 			children = (
+				0D1644211E4E057C00156619 /* Frameworks */,
+				0D1644191E4E03AB00156619 /* Services */,
 				0D1643F71E4DFF1F00156619 /* AppDelegate.h */,
 				0D1643F81E4DFF1F00156619 /* AppDelegate.m */,
-				0D1643FA1E4DFF1F00156619 /* ViewController.h */,
-				0D1643FB1E4DFF1F00156619 /* ViewController.m */,
+				0D1643FA1E4DFF1F00156619 /* MainViewController.h */,
+				0D1643FB1E4DFF1F00156619 /* MainViewController.m */,
 				0D1643FD1E4DFF1F00156619 /* Main.storyboard */,
 				0D1644001E4DFF1F00156619 /* Assets.xcassets */,
 				0D1644021E4DFF1F00156619 /* LaunchScreen.storyboard */,
@@ -111,6 +131,26 @@
 			path = GoEuroTestTests;
 			sourceTree = "<group>";
 		};
+		0D1644191E4E03AB00156619 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0D16441B1E4E041700156619 /* TimeTableService.swift */,
+				0D16441A1E4E041700156619 /* GoEuroTest-Bridging-Header.h */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0D1644211E4E057C00156619 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D1644221E4E05A100156619 /* Alamofire.framework */,
+				0D1644231E4E05A100156619 /* Realm.framework */,
+				0D1644241E4E05A100156619 /* RealmSwift.framework */,
+				0D1644251E4E05A100156619 /* SwiftOverlays.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +161,7 @@
 				0D1643ED1E4DFF1F00156619 /* Sources */,
 				0D1643EE1E4DFF1F00156619 /* Frameworks */,
 				0D1643EF1E4DFF1F00156619 /* Resources */,
+				0D16442A1E4E05B800156619 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +201,7 @@
 				TargetAttributes = {
 					0D1643F01E4DFF1F00156619 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					0D1644091E4DFF1F00156619 = {
@@ -195,6 +237,7 @@
 			files = (
 				0D1644041E4DFF1F00156619 /* LaunchScreen.storyboard in Resources */,
 				0D1644011E4DFF1F00156619 /* Assets.xcassets in Resources */,
+				0D1644201E4E049B00156619 /* Cartfile in Resources */,
 				0D1643FF1E4DFF1F00156619 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,14 +251,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D16442A1E4E05B800156619 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftOverlays.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D1643ED1E4DFF1F00156619 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1643FC1E4DFF1F00156619 /* ViewController.m in Sources */,
+				0D1643FC1E4DFF1F00156619 /* MainViewController.m in Sources */,
 				0D1643F91E4DFF1F00156619 /* AppDelegate.m in Sources */,
 				0D1643F61E4DFF1F00156619 /* main.m in Sources */,
+				0D16441C1E4E041700156619 /* TimeTableService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +414,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GoEuroTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Prokop.GoEuroTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoEuroTest/Services/GoEuroTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -360,16 +433,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GoEuroTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Prokop.GoEuroTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoEuroTest/Services/GoEuroTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		0D1644171E4DFF1F00156619 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GoEuroTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -382,6 +463,7 @@
 		0D1644181E4DFF1F00156619 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GoEuroTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

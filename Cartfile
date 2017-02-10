@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" == 4.2.0
+github "realm/realm-cocoa" == 2.1.2
+github "peterprokop/SwiftOverlays" == 3.0.0
