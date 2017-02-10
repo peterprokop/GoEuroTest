@@ -8,7 +8,7 @@ import RealmSwift
 }
 
 
-@objc class TimeTableEntity: NSObject {
+@objc class TimeTableEntity: NSObject, JSONConvertible {
     
     let id: Int
     let providerLogo: URL?
@@ -26,13 +26,21 @@ import RealmSwift
         static let numberOfStops    = "number_of_stops"
     }
     
-    override init() {
-        id = 0
-        providerLogo = nil
-        priceInEuros = NSDecimalNumber(string: "0")
-        departureTime = ""
-        arrivalTime = ""
-        numberOfStops = 0
+    required init(value: Any?) throws {
+        id              = try value.int(Keys.id)
+        providerLogo    = try? value.url(providerLogo)
+        
+        
+        let doublePrice = try? value.double(Keys.priceInEuros)
+        let stringPrice = try value.string(Keys.priceInEuros)
+        
+        priceInEuros    = NSDecimalNumber(string: "0")
+        
+        departureTime   = try value.string(Keys.departureTime)
+        arrivalTime     = try value.string(Keys.arrivalTime)
+        numberOfStops   = try value.int(Keys.numberOfStops)
+        
+        super.init()
     }
     
 }

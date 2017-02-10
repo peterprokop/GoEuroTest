@@ -20,6 +20,7 @@
 		0D1644271E4E05A100156619 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644231E4E05A100156619 /* Realm.framework */; };
 		0D1644281E4E05A100156619 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644241E4E05A100156619 /* RealmSwift.framework */; };
 		0D1644291E4E05A100156619 /* SwiftOverlays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644251E4E05A100156619 /* SwiftOverlays.framework */; };
+		0D16442C1E4E1A1C00156619 /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D16442B1E4E1A1C00156619 /* JSONConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0D1644231E4E05A100156619 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
 		0D1644241E4E05A100156619 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		0D1644251E4E05A100156619 /* SwiftOverlays.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftOverlays.framework; path = Carthage/Build/iOS/SwiftOverlays.framework; sourceTree = SOURCE_ROOT; };
+		0D16442B1E4E1A1C00156619 /* JSONConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		0D1644191E4E03AB00156619 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0D16442B1E4E1A1C00156619 /* JSONConvertible.swift */,
 				0D16441B1E4E041700156619 /* TimeTableService.swift */,
 				0D16441A1E4E041700156619 /* GoEuroTest-Bridging-Header.h */,
 			);
@@ -281,6 +284,7 @@
 				0D1643F91E4DFF1F00156619 /* AppDelegate.m in Sources */,
 				0D1643F61E4DFF1F00156619 /* main.m in Sources */,
 				0D16441C1E4E041700156619 /* TimeTableService.swift in Sources */,
+				0D16442C1E4E1A1C00156619 /* JSONConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
