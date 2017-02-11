@@ -2,61 +2,28 @@ import Foundation
 import Alamofire
 import RealmSwift
 
-
-@objc enum ServiceError: Int {
-    case NoCachedHistoryFound
-}
-
-
-@objc class TimeTableEntity: NSObject, JSONConvertible {
-    
-    let id: Int
-    let providerLogo: URL?
-    let priceInEuros: NSDecimalNumber // Could be String or Number in JSON
-    let departureTime: String
-    let arrivalTime: String
-    let numberOfStops: Int
-    
-    enum Keys {
-        static let id               = "id"
-        static let providerLogo     = "provider_logo"
-        static let priceInEuros     = "price_in_euros"
-        static let departureTime    = "departure_time"
-        static let arrivalTime      = "arrival_time"
-        static let numberOfStops    = "number_of_stops"
-    }
-    
-    required init(value: Any?) throws {
-        id              = try value.int(Keys.id)
-        providerLogo    = try? value.url(providerLogo)
-        
-        
-        let doublePrice = try? value.double(Keys.priceInEuros)
-        let stringPrice = try value.string(Keys.priceInEuros)
-        
-        priceInEuros    = NSDecimalNumber(string: "0")
-        
-        departureTime   = try value.string(Keys.departureTime)
-        arrivalTime     = try value.string(Keys.arrivalTime)
-        numberOfStops   = try value.int(Keys.numberOfStops)
-        
-        super.init()
-    }
-    
-}
-
-
 typealias GetFlightTimeTableCompletion = ([TimeTableEntity]?, NSError?) -> Void
 
 @objc protocol TimeTableService {
     /// Get flight time table
-    //func getFlightTimeTable(completion: (TimeTableEntity?, ServiceError?) -> Void)
     func getFlightTimeTable(completion: @escaping ([TimeTableEntity]?, NSError?) -> Void)
+    
+    /// Get train time table
+    func getTrainTimeTable(completion: @escaping ([TimeTableEntity]?, NSError?) -> Void)
+    
+    /// Get bus time table
+    func getBusTimeTable(completion: @escaping ([TimeTableEntity]?, NSError?) -> Void)
 }
 
 protocol TimeTableDataProvider {
     /// Get flight time table
     func getFlightTimeTable(completion: @escaping GetFlightTimeTableCompletion)
+    
+    /// Get train time table
+    func getTrainTimeTable(completion: @escaping GetFlightTimeTableCompletion)
+    
+    /// Get bus time table
+    func getBusTimeTable(completion: @escaping GetFlightTimeTableCompletion)
 }
 
 class DefaultTimeTableService: TimeTableService {
@@ -71,28 +38,54 @@ class DefaultTimeTableService: TimeTableService {
     internal func getFlightTimeTable(completion: @escaping ([TimeTableEntity]?, NSError?) -> Void) {
         dataProvider.getFlightTimeTable(completion: completion)
     }
+    
+    /// Get train time table
+    internal func getTrainTimeTable(completion: @escaping ([TimeTableEntity]?, NSError?) -> Void) {
+        dataProvider.getTrainTimeTable(completion: completion)
+    }
+    
+    /// Get bus time table
+    internal func getBusTimeTable(completion: @escaping ([TimeTableEntity]?, NSError?) -> Void) {
+        dataProvider.getBusTimeTable(completion: completion)
+    }
 }
 
 class DefaultTimeTableDataProvider: TimeTableDataProvider {
     
     func getFlightTimeTable(completion: @escaping GetFlightTimeTableCompletion) {
         let urlString = "https://api.myjson.com/bins/w60i"
-        
+        getTimeTable(urlString: urlString, completion: completion)
+    }
+    
+    func getTrainTimeTable(completion: @escaping GetFlightTimeTableCompletion) {
+        let urlString = "https://api.myjson.com/bins/3zmcy"
+        getTimeTable(urlString: urlString, completion: completion)
+    }
+    
+    func getBusTimeTable(completion: @escaping GetFlightTimeTableCompletion) {
+        let urlString = "https://api.myjson.com/bins/37yzm"
+        getTimeTable(urlString: urlString, completion: completion)
+    }
+
+    fileprivate func getTimeTable(urlString: String, completion: @escaping GetFlightTimeTableCompletion) {
         Alamofire.request(urlString).validate().responseJSON { response in
             switch response.result {
             case .success:
-                if let json = response.result.value as? [Any]//,
-//                    let entity = BPICurrentPriceEntity(JSON: json)
-                {
-                    print(json)
-//                    completion(.success(entity))
+                if let timeTable: [TimeTableEntity] = try? response.result.value.array() {
+                    completion(timeTable, nil)
+                } else {
+                    let userInfo = [NSLocalizedDescriptionKey: "Server response doesn't match data model"]
+                    let error = NSError(domain: "com.goeurotest.error",
+                                        code: 1001,
+                                        userInfo: userInfo)
+                    completion(nil, error)
                 }
             case .failure(let error):
                 completion(nil, error as NSError)
             }
         }
     }
-
+    
 }
 
 @objc class Services: NSObject {

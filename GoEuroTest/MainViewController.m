@@ -22,11 +22,27 @@
 
     [[Services defaultTimeTableService] getFlightTimeTableWithCompletion:
         ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
-        
-            NSLog(@"%@ %@", timeTable, error);
             
+            for (TimeTableEntity* entity in timeTable) {
+                NSLog(@"%@", [entity providerLogoURLForSize:63]);
+            }
     }];
 
+    [[Services defaultTimeTableService] getTrainTimeTableWithCompletion:
+     ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
+         
+         for (TimeTableEntity* entity in timeTable) {
+             NSLog(@"%@", [entity providerLogoURLForSize:63]);
+         }
+     }];
+    
+    [[Services defaultTimeTableService] getBusTimeTableWithCompletion:
+     ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
+         
+         for (TimeTableEntity* entity in timeTable) {
+             NSLog(@"%@", [entity providerLogoURLForSize:63]);
+         }
+     }];
 }
 
 - (void)didReceiveMemoryWarning {
