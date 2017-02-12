@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "GoEuroTest-Swift.h"
 
+typedef NS_ENUM(NSInteger, OfferType) {
+    OfferTypeFlights,
+    OfferTypeTrains,
+    OfferTypeBuses
+};
+
 @interface OffersViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic) OfferType offerType;
 
 @end
 

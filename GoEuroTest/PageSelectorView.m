@@ -36,8 +36,10 @@
 }
 
 - (void)commonInit {
+    self.backgroundColor = [UIColor colorWithRed:17/255. green:99/255. blue:162/255. alpha:1.0];
+    
     _selectedMarker = [[UIView alloc] initWithFrame:CGRectZero];
-    _selectedMarker.backgroundColor = [UIColor colorWithRed:17/255. green:99/255. blue:162/255. alpha:1.0];
+    _selectedMarker.backgroundColor = [UIColor whiteColor];
     [self addSubview:_selectedMarker];
 }
 
@@ -53,6 +55,7 @@
     for (NSString* title in titles) {
         UIButton* button = [UIButton buttonWithType: UIButtonTypeSystem];
         button.tag = index;
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitle:title forState:UIControlStateNormal];
         [button addTarget:self
                    action:@selector(buttonTapped:)
@@ -93,8 +96,8 @@
         POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];;
         
         anim.dynamicsTension = 10.f;
-        anim.dynamicsFriction = 1.0f;
-        anim.springBounciness = 12.0f;
+        anim.dynamicsFriction = 1.f;
+        anim.springBounciness = 12.f;
         
         anim.toValue = [NSValue valueWithCGRect:markerFrame];
         [_selectedMarker pop_addAnimation:anim forKey:@"frame"];
@@ -103,15 +106,27 @@
     }
 }
 
+- (void)setSelectedIndex:(NSUInteger)index {
+    _selectedIndex = index;
+    
+    [self updateSelectionMarker: YES];
+}
+
 #pragma mark Actions
 
 - (void)buttonTapped:(UIButton *)sender {
+    if (_selectedIndex == sender.tag) {
+        return;
+    }
+    
+    NSUInteger previousPage = _selectedIndex;
     _selectedIndex = sender.tag;
     
     [self updateSelectionMarker: YES];
     
     [_delegate pageSelectorView: self
-                  didSelectPage: _selectedIndex];
+                  didSelectPage: _selectedIndex
+                   previousPage: previousPage];
 }
 
 @end

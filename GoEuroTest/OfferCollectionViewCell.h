@@ -11,11 +11,11 @@
 
 @interface OfferCollectionViewCell : UICollectionViewCell
 
-@property IBOutlet UILabel* priceLabel;
-@property IBOutlet UILabel* timesLabel;
-@property IBOutlet UILabel* numberOfChangesLabel;
+@property (nonatomic, weak) IBOutlet UILabel* priceLabel;
+@property (nonatomic, weak) IBOutlet UILabel* timesLabel;
+@property (nonatomic, weak) IBOutlet UILabel* numberOfChangesLabel;
 
-@property IBOutlet UIImageView* logoImageView;
+@property (nonatomic, weak) IBOutlet UIImageView* logoImageView;
 
 - (void)updateWithModel:(TimeTableEntity *) timeTableEntity;
 

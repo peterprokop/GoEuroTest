@@ -26,28 +26,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [[Services defaultTimeTableService] getFlightTimeTableWithCompletion:
-        ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
-            
-            _flights = timeTable;
-            [_collectionView reloadData];
-    }];
-
-    [[Services defaultTimeTableService] getTrainTimeTableWithCompletion:
-     ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
-         
-         for (TimeTableEntity* entity in timeTable) {
-             NSLog(@"%@", [entity providerLogoURLForSize:63]);
-         }
-     }];
+    switch (_offerType) {
+        case OfferTypeFlights: {
+            [[Services defaultTimeTableService] getFlightTimeTableWithCompletion:
+             ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
+                 
+                 _flights = timeTable;
+                 [_collectionView reloadData];
+             }];
+            break;
+        }
+        case OfferTypeTrains: {
+            [[Services defaultTimeTableService] getTrainTimeTableWithCompletion:
+             ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
+                 _flights = timeTable;
+                 [_collectionView reloadData];
+             }];
+            break;
+        }
+        case OfferTypeBuses: {
+            [[Services defaultTimeTableService] getBusTimeTableWithCompletion:
+             ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
+                 _flights = timeTable;
+                 [_collectionView reloadData];
+             }];
+            break;
+        }
+        default:
+            break;
+    }
     
-    [[Services defaultTimeTableService] getBusTimeTableWithCompletion:
-     ^(NSArray<TimeTableEntity *> * _Nullable timeTable, NSError * _Nullable error) {
-         
-         for (TimeTableEntity* entity in timeTable) {
-             NSLog(@"%@", [entity providerLogoURLForSize:63]);
-         }
-     }];
+    
+
+    
+    
+
 }
 
 #pragma mark UICollectionViewDataSource

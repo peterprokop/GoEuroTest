@@ -12,8 +12,9 @@
 
 @protocol PageSelectorViewDelegate <NSObject>
 
-- (void)pageSelectorView:(PageSelectorView *)pageSelectorView
-           didSelectPage:(NSUInteger) page;
+- (void)pageSelectorView:(PageSelectorView *) pageSelectorView
+           didSelectPage:(NSUInteger) page
+            previousPage:(NSUInteger) previousPage;
 
 @end
 
@@ -24,6 +25,7 @@
 @property (nonatomic, weak) id<PageSelectorViewDelegate> delegate;
 
 - (void)setPageTitles:(NSArray<NSString *> *)titles;
+- (void)setSelectedIndex:(NSUInteger)index;
 
 @end
 
