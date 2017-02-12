@@ -9,11 +9,13 @@
 #import "OffersViewController.h"
 #import "OfferCollectionViewCell.h"
 
+
 @interface OffersViewController () {
     NSArray<TimeTableEntity *>* _flights;
 }
 
 @property IBOutlet UICollectionView* collectionView;
+
 
 @end
 

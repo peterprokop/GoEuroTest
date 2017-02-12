@@ -8,8 +8,11 @@
 
 #import "HomeViewController.h"
 #import "OffersViewController.h"
+#import "PageSelectorView.h"
 
 @interface HomeViewController ()<UIPageViewControllerDataSource>
+
+@property IBOutlet PageSelectorView* pageSelectorView;
 
 @end
 
@@ -17,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [_pageSelectorView setPageTitles: @[@"Flights", @"Trains", @"Buses"]];
 }
 
 #pragma mark - Navigation

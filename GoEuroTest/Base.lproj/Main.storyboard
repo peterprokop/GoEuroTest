@@ -146,17 +146,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rX5-fX-vGx">
-                                <rect key="frame" x="0.0" y="130" width="320" height="438"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-HH-YeF" customClass="PageSelectorView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="s2b-Hj-JNQ"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rX5-fX-vGx">
+                                <rect key="frame" x="0.0" y="97" width="320" height="471"/>
                                 <connections>
                                     <segue destination="jpl-jq-3XO" kind="embed" identifier="EmbedPageViewController" id="ElE-Bg-cZz"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ghu-HH-YeF" firstAttribute="top" secondItem="PtH-dZ-fLN" secondAttribute="bottom" id="2jT-Xn-gnq"/>
+                            <constraint firstItem="ghu-HH-YeF" firstAttribute="leading" secondItem="sBV-Z8-xEW" secondAttribute="leading" id="So7-HQ-bxy"/>
+                            <constraint firstItem="rX5-fX-vGx" firstAttribute="leading" secondItem="sBV-Z8-xEW" secondAttribute="leading" id="aLl-Uh-dOq"/>
+                            <constraint firstAttribute="trailing" secondItem="rX5-fX-vGx" secondAttribute="trailing" id="ba3-JB-Etq"/>
+                            <constraint firstAttribute="trailing" secondItem="ghu-HH-YeF" secondAttribute="trailing" id="e9o-Yz-NQA"/>
+                            <constraint firstItem="HS1-jx-aeW" firstAttribute="top" secondItem="rX5-fX-vGx" secondAttribute="bottom" id="mtx-FR-Dxw"/>
+                            <constraint firstItem="rX5-fX-vGx" firstAttribute="top" secondItem="ghu-HH-YeF" secondAttribute="bottom" id="pM5-p9-E35"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hMW-KM-DDB"/>
+                    <connections>
+                        <outlet property="pageSelectorView" destination="ghu-HH-YeF" id="8Qy-rH-XPf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3d-yS-1SC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

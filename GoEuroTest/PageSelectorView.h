@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageSelectorView : UIView
+@class PageSelectorView;
+
+@protocol PageSelectorViewDelegate <NSObject>
+
+- (void)pageSelectorView:(PageSelectorView *)pageSelectorView
+           didSelectPage:(NSUInteger) page;
 
 @end
+
+
+
+@interface PageSelectorView : UIView
+
+@property (nonatomic, weak) id<PageSelectorViewDelegate> delegate;
+
+- (void)setPageTitles:(NSArray<NSString *> *)titles;
+
+@end
+
