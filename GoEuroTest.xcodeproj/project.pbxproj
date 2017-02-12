@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D1643F61E4DFF1F00156619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643F51E4DFF1F00156619 /* main.m */; };
 		0D1643F91E4DFF1F00156619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643F81E4DFF1F00156619 /* AppDelegate.m */; };
-		0D1643FC1E4DFF1F00156619 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643FB1E4DFF1F00156619 /* MainViewController.m */; };
+		0D1643FC1E4DFF1F00156619 /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1643FB1E4DFF1F00156619 /* OffersViewController.m */; };
 		0D1643FF1E4DFF1F00156619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1643FD1E4DFF1F00156619 /* Main.storyboard */; };
 		0D1644011E4DFF1F00156619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1644001E4DFF1F00156619 /* Assets.xcassets */; };
 		0D1644041E4DFF1F00156619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1644021E4DFF1F00156619 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,10 @@
 		0D1644281E4E05A100156619 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644241E4E05A100156619 /* RealmSwift.framework */; };
 		0D1644291E4E05A100156619 /* SwiftOverlays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1644251E4E05A100156619 /* SwiftOverlays.framework */; };
 		0D16442C1E4E1A1C00156619 /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D16442B1E4E1A1C00156619 /* JSONConvertible.swift */; };
+		0D36EB631E504341001C691D /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D36EB621E504341001C691D /* SDWebImage.framework */; };
+		0D36EB661E5049E8001C691D /* OfferCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB651E5049E8001C691D /* OfferCollectionViewCell.m */; };
+		0D36EB691E506E8E001C691D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB681E506E8E001C691D /* HomeViewController.m */; };
+		0D36EB6C1E50781A001C691D /* PageSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB6B1E50781A001C691D /* PageSelectorView.m */; };
 		0D37AC6F1E4F802A00CDF98C /* TimeTableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37AC6E1E4F802A00CDF98C /* TimeTableEntity.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +43,8 @@
 		0D1643F51E4DFF1F00156619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D1643F71E4DFF1F00156619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D1643F81E4DFF1F00156619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0D1643FA1E4DFF1F00156619 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		0D1643FB1E4DFF1F00156619 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0D1643FA1E4DFF1F00156619 /* OffersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
+		0D1643FB1E4DFF1F00156619 /* OffersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersViewController.m; sourceTree = "<group>"; };
 		0D1643FE1E4DFF1F00156619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D1644001E4DFF1F00156619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D1644031E4DFF1F00156619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,13 @@
 		0D1644241E4E05A100156619 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		0D1644251E4E05A100156619 /* SwiftOverlays.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftOverlays.framework; path = Carthage/Build/iOS/SwiftOverlays.framework; sourceTree = SOURCE_ROOT; };
 		0D16442B1E4E1A1C00156619 /* JSONConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
+		0D36EB621E504341001C691D /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = SOURCE_ROOT; };
+		0D36EB641E5049E8001C691D /* OfferCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferCollectionViewCell.h; sourceTree = "<group>"; };
+		0D36EB651E5049E8001C691D /* OfferCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCollectionViewCell.m; sourceTree = "<group>"; };
+		0D36EB671E506E8E001C691D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		0D36EB681E506E8E001C691D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		0D36EB6A1E50781A001C691D /* PageSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageSelectorView.h; sourceTree = "<group>"; };
+		0D36EB6B1E50781A001C691D /* PageSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageSelectorView.m; sourceTree = "<group>"; };
 		0D37AC6E1E4F802A00CDF98C /* TimeTableEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D36EB631E504341001C691D /* SDWebImage.framework in Frameworks */,
 				0D1644271E4E05A100156619 /* Realm.framework in Frameworks */,
 				0D1644291E4E05A100156619 /* SwiftOverlays.framework in Frameworks */,
 				0D1644261E4E05A100156619 /* Alamofire.framework in Frameworks */,
@@ -107,13 +119,19 @@
 				0D1644191E4E03AB00156619 /* Services */,
 				0D1643F71E4DFF1F00156619 /* AppDelegate.h */,
 				0D1643F81E4DFF1F00156619 /* AppDelegate.m */,
-				0D1643FA1E4DFF1F00156619 /* MainViewController.h */,
-				0D1643FB1E4DFF1F00156619 /* MainViewController.m */,
+				0D1643FA1E4DFF1F00156619 /* OffersViewController.h */,
+				0D1643FB1E4DFF1F00156619 /* OffersViewController.m */,
+				0D36EB671E506E8E001C691D /* HomeViewController.h */,
+				0D36EB681E506E8E001C691D /* HomeViewController.m */,
 				0D1643FD1E4DFF1F00156619 /* Main.storyboard */,
 				0D1644001E4DFF1F00156619 /* Assets.xcassets */,
 				0D1644021E4DFF1F00156619 /* LaunchScreen.storyboard */,
 				0D1644051E4DFF1F00156619 /* Info.plist */,
 				0D1643F41E4DFF1F00156619 /* Supporting Files */,
+				0D36EB641E5049E8001C691D /* OfferCollectionViewCell.h */,
+				0D36EB651E5049E8001C691D /* OfferCollectionViewCell.m */,
+				0D36EB6A1E50781A001C691D /* PageSelectorView.h */,
+				0D36EB6B1E50781A001C691D /* PageSelectorView.m */,
 			);
 			path = GoEuroTest;
 			sourceTree = "<group>";
@@ -149,6 +167,7 @@
 		0D1644211E4E057C00156619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D36EB621E504341001C691D /* SDWebImage.framework */,
 				0D1644221E4E05A100156619 /* Alamofire.framework */,
 				0D1644231E4E05A100156619 /* Realm.framework */,
 				0D1644241E4E05A100156619 /* RealmSwift.framework */,
@@ -268,6 +287,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftOverlays.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -283,12 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1643FC1E4DFF1F00156619 /* MainViewController.m in Sources */,
+				0D1643FC1E4DFF1F00156619 /* OffersViewController.m in Sources */,
 				0D1643F91E4DFF1F00156619 /* AppDelegate.m in Sources */,
 				0D37AC6F1E4F802A00CDF98C /* TimeTableEntity.swift in Sources */,
+				0D36EB6C1E50781A001C691D /* PageSelectorView.m in Sources */,
 				0D1643F61E4DFF1F00156619 /* main.m in Sources */,
 				0D16441C1E4E041700156619 /* TimeTableService.swift in Sources */,
 				0D16442C1E4E1A1C00156619 /* JSONConvertible.swift in Sources */,
+				0D36EB661E5049E8001C691D /* OfferCollectionViewCell.m in Sources */,
+				0D36EB691E506E8E001C691D /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +451,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = GoEuroTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Prokop.GoEuroTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +471,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = GoEuroTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Prokop.GoEuroTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

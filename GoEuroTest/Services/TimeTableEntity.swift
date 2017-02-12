@@ -41,7 +41,12 @@ import Foundation
     func providerLogoURL(forSize size: Int) -> URL? {
         guard let providerLogoURLTemplate = providerLogoURLTemplate else { return nil }
         
-        let urlString = providerLogoURLTemplate.replacingOccurrences(of: "{size}", with: "\(size)")
+        var urlString = providerLogoURLTemplate.replacingOccurrences(of: "{size}", with: "\(size)")
+        
+        if !urlString.contains("https") {
+            urlString = urlString.replacingOccurrences(of: "http", with: "https")
+        }
+        
         return URL(string: urlString)
     }
     
