@@ -25,6 +25,7 @@
 		0D36EB661E5049E8001C691D /* OfferCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB651E5049E8001C691D /* OfferCollectionViewCell.m */; };
 		0D36EB691E506E8E001C691D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB681E506E8E001C691D /* HomeViewController.m */; };
 		0D36EB6C1E50781A001C691D /* PageSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB6B1E50781A001C691D /* PageSelectorView.m */; };
+		0D36EB6E1E50A944001C691D /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D36EB6D1E50A944001C691D /* pop.framework */; };
 		0D37AC6F1E4F802A00CDF98C /* TimeTableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37AC6E1E4F802A00CDF98C /* TimeTableEntity.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		0D36EB681E506E8E001C691D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0D36EB6A1E50781A001C691D /* PageSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageSelectorView.h; sourceTree = "<group>"; };
 		0D36EB6B1E50781A001C691D /* PageSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageSelectorView.m; sourceTree = "<group>"; };
+		0D36EB6D1E50A944001C691D /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = Carthage/Build/iOS/pop.framework; sourceTree = SOURCE_ROOT; };
 		0D37AC6E1E4F802A00CDF98C /* TimeTableEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				0D1644271E4E05A100156619 /* Realm.framework in Frameworks */,
 				0D1644291E4E05A100156619 /* SwiftOverlays.framework in Frameworks */,
 				0D1644261E4E05A100156619 /* Alamofire.framework in Frameworks */,
+				0D36EB6E1E50A944001C691D /* pop.framework in Frameworks */,
 				0D1644281E4E05A100156619 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +170,7 @@
 		0D1644211E4E057C00156619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D36EB6D1E50A944001C691D /* pop.framework */,
 				0D36EB621E504341001C691D /* SDWebImage.framework */,
 				0D1644221E4E05A100156619 /* Alamofire.framework */,
 				0D1644231E4E05A100156619 /* Realm.framework */,
@@ -288,6 +292,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftOverlays.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/pop.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (

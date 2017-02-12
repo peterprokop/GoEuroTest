@@ -7,6 +7,7 @@
 //
 
 #import "PageSelectorView.h"
+#import <pop/POP.h>
 
 @implementation PageSelectorView {
     NSMutableArray<UIButton *>* _buttons;
@@ -76,7 +77,9 @@
         index++;
     }
     
-    [self updateSelectionMarker: NO];
+    if (![[_selectedMarker pop_animationKeys] containsObject:@"frame"]) {
+        [self updateSelectionMarker: NO];
+    }
 }
 
 - (void)updateSelectionMarker:(BOOL)animated {
@@ -86,7 +89,18 @@
     CGFloat width = button.frame.size.width;
     CGRect markerFrame = CGRectMake(minX, maxY - 1, width, 1);
     
-    _selectedMarker.frame = markerFrame;
+    if (animated) {
+        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];;
+        
+        anim.dynamicsTension = 10.f;
+        anim.dynamicsFriction = 1.0f;
+        anim.springBounciness = 12.0f;
+        
+        anim.toValue = [NSValue valueWithCGRect:markerFrame];
+        [_selectedMarker pop_addAnimation:anim forKey:@"frame"];
+    } else {
+        _selectedMarker.frame = markerFrame;
+    }
 }
 
 #pragma mark Actions
