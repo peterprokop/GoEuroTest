@@ -15,9 +15,16 @@ typedef NS_ENUM(NSInteger, OfferType) {
     OfferTypeBuses
 };
 
+typedef NS_ENUM(NSInteger, OfferSorting) {
+    OfferSortingDeparture,
+    OfferSortingArrival,
+    OfferSortingDuration
+};
+
 @interface OffersViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic) OfferType offerType;
+@property (nonatomic) OfferSorting offerSorting;
 
 @end
 

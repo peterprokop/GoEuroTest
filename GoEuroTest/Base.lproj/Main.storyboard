@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
                                     <size key="itemSize" width="320" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="80"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OfferCollectionViewCell" id="WmK-EW-yAy" customClass="OfferCollectionViewCell">
@@ -46,7 +47,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixy-LP-jXI">
-                                                    <rect key="frame" x="8" y="0.0" width="152" height="40"/>
+                                                    <rect key="frame" x="8" y="0.0" width="132" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Hfi-3Q-f5S"/>
                                                     </constraints>
@@ -55,7 +56,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHc-8s-d5g">
-                                                    <rect key="frame" x="160" y="0.0" width="152" height="40"/>
+                                                    <rect key="frame" x="140" y="0.0" width="172" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="9XH-re-HpC"/>
                                                     </constraints>
@@ -85,7 +86,7 @@
                                             <constraint firstItem="Ixy-LP-jXI" firstAttribute="leading" secondItem="WmK-EW-yAy" secondAttribute="leading" constant="8" id="0sj-td-pGq"/>
                                             <constraint firstAttribute="trailing" secondItem="LUo-Z4-IjO" secondAttribute="trailing" constant="8" id="1JP-pG-A7r"/>
                                             <constraint firstItem="eOV-zm-G5m" firstAttribute="leading" secondItem="WmK-EW-yAy" secondAttribute="leading" id="1Pq-ci-zAE"/>
-                                            <constraint firstItem="UHc-8s-d5g" firstAttribute="width" secondItem="Ixy-LP-jXI" secondAttribute="width" id="99T-1x-oPA"/>
+                                            <constraint firstItem="UHc-8s-d5g" firstAttribute="width" secondItem="Ixy-LP-jXI" secondAttribute="width" multiplier="1.3" id="99T-1x-oPA"/>
                                             <constraint firstAttribute="trailing" secondItem="UHc-8s-d5g" secondAttribute="trailing" constant="8" id="JIQ-wD-NrZ"/>
                                             <constraint firstItem="2jl-L8-FhA" firstAttribute="top" secondItem="Ixy-LP-jXI" secondAttribute="bottom" constant="10" id="KwO-dO-4Xv"/>
                                             <constraint firstAttribute="bottom" secondItem="2jl-L8-FhA" secondAttribute="bottom" id="LYI-ew-z27"/>
@@ -111,10 +112,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="D1e-6t-c2x"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-kA-b4d">
+                                <rect key="frame" x="16" y="456" width="60" height="40"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.21960784310000001" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="WTD-Vt-r2o"/>
+                                    <constraint firstAttribute="height" constant="40" id="rpc-t6-xZI"/>
+                                </constraints>
+                                <state key="normal" title="Sort">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortingButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mxj-T7-v4M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WuK-wT-t7v" secondAttribute="trailing" id="bDW-Dj-MaP"/>
+                            <constraint firstItem="XHF-kA-b4d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="fly-jE-klz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XHF-kA-b4d" secondAttribute="bottom" constant="8" id="hYU-vT-6P5"/>
                             <constraint firstItem="WuK-wT-t7v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i3K-lr-5iT"/>
                             <constraint firstAttribute="bottom" secondItem="WuK-wT-t7v" secondAttribute="bottom" id="zOb-YA-hfB"/>
                             <constraint firstItem="WuK-wT-t7v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zgV-V7-fes"/>
@@ -127,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163" y="138"/>
+            <point key="canvasLocation" x="-163.125" y="137.32394366197184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n9v-SE-tYH">
