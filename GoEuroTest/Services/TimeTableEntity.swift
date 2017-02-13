@@ -8,6 +8,23 @@
 
 import Foundation
 
+enum ModelError: Error {
+    case wrongFormat
+}
+
+extension String {
+    func colonSeparatedFormatToMinutes() -> Int? {
+        let hoursAndMinutes = components(separatedBy: ":")
+        guard
+            hoursAndMinutes.count == 2,
+            let hours = Int(hoursAndMinutes[0]),
+            let minutes = Int(hoursAndMinutes[1])
+        else { return nil }
+        
+        return hours * 60 + minutes;
+    }
+}
+
 @objc class TimeTableEntity: NSObject, JSONConvertible {
     
     let id: Int
@@ -16,6 +33,12 @@ import Foundation
     let departureTime: String
     let arrivalTime: String
     let numberOfStops: Int
+    
+    // Calculated properties
+    let departureTimestamp: Int
+    let arrivalTimestamp: Int
+    let durationInMinutes: Int
+    let durationDescription: String
     
     enum Keys {
         static let id                           = "id"
@@ -34,6 +57,25 @@ import Foundation
         departureTime   = try value.string(Keys.departureTime)
         arrivalTime     = try value.string(Keys.arrivalTime)
         numberOfStops   = try value.int(Keys.numberOfStops)
+        
+        let departure = departureTime.colonSeparatedFormatToMinutes()
+        let arrival = arrivalTime.colonSeparatedFormatToMinutes()
+        
+        guard departure != nil, arrival != nil else { throw ModelError.wrongFormat }
+        
+        departureTimestamp = departure!
+        arrivalTimestamp = arrival!
+        
+        // Calculate difference - if it's less or equal to 0, add 24 hours
+        var difference = arrivalTimestamp - departureTimestamp
+        if difference <= 0 {
+            difference += 24 * 60
+        }
+        
+        durationInMinutes = difference
+        let hours = difference / 60
+        let minutes = difference - hours * 60
+        durationDescription = String(format: "%d:%.2d", hours, minutes)
         
         super.init()
     }

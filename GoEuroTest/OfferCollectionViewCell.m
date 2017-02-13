@@ -29,9 +29,10 @@
 - (void)updateWithModel:(TimeTableEntity *) timeTableEntity {
     
     _priceLabel.text = [[Formatters currency] stringFromNumber:[NSNumber numberWithDouble:timeTableEntity.priceInEuros]];
-    _timesLabel.text = [NSString stringWithFormat:@"%@ - %@",
+    _timesLabel.text = [NSString stringWithFormat:@"%@ - %@ (%@)",
                         timeTableEntity.departureTime,
-                        timeTableEntity.arrivalTime
+                        timeTableEntity.arrivalTime,
+                        timeTableEntity.durationDescription
     ];
 
     _numberOfChangesLabel.text = [timeTableEntity numberOfStopsDescription];
