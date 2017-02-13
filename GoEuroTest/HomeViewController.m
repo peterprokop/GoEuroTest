@@ -43,6 +43,10 @@
     [_pageSelectorView setPageTitles: @[@"Flights", @"Trains", @"Buses"]];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

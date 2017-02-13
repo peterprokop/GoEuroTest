@@ -26,6 +26,7 @@
 		0D36EB691E506E8E001C691D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB681E506E8E001C691D /* HomeViewController.m */; };
 		0D36EB6C1E50781A001C691D /* PageSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB6B1E50781A001C691D /* PageSelectorView.m */; };
 		0D36EB6E1E50A944001C691D /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D36EB6D1E50A944001C691D /* pop.framework */; };
+		0D36EB721E518A8E001C691D /* UINavigationController_StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36EB711E518A8E001C691D /* UINavigationController_StatusBarStyle.m */; };
 		0D37AC6F1E4F802A00CDF98C /* TimeTableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37AC6E1E4F802A00CDF98C /* TimeTableEntity.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		0D36EB6A1E50781A001C691D /* PageSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageSelectorView.h; sourceTree = "<group>"; };
 		0D36EB6B1E50781A001C691D /* PageSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageSelectorView.m; sourceTree = "<group>"; };
 		0D36EB6D1E50A944001C691D /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = Carthage/Build/iOS/pop.framework; sourceTree = SOURCE_ROOT; };
+		0D36EB6F1E51875E001C691D /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		0D36EB711E518A8E001C691D /* UINavigationController_StatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationController_StatusBarStyle.m; sourceTree = "<group>"; };
 		0D37AC6E1E4F802A00CDF98C /* TimeTableEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,8 @@
 				0D36EB651E5049E8001C691D /* OfferCollectionViewCell.m */,
 				0D36EB6A1E50781A001C691D /* PageSelectorView.h */,
 				0D36EB6B1E50781A001C691D /* PageSelectorView.m */,
+				0D36EB6F1E51875E001C691D /* Config.h */,
+				0D36EB711E518A8E001C691D /* UINavigationController_StatusBarStyle.m */,
 			);
 			path = GoEuroTest;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			files = (
 				0D1643FC1E4DFF1F00156619 /* OffersViewController.m in Sources */,
 				0D1643F91E4DFF1F00156619 /* AppDelegate.m in Sources */,
+				0D36EB721E518A8E001C691D /* UINavigationController_StatusBarStyle.m in Sources */,
 				0D37AC6F1E4F802A00CDF98C /* TimeTableEntity.swift in Sources */,
 				0D36EB6C1E50781A001C691D /* PageSelectorView.m in Sources */,
 				0D1643F61E4DFF1F00156619 /* main.m in Sources */,
@@ -398,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -439,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

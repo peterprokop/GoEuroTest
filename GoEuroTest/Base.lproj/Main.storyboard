@@ -122,6 +122,7 @@
         <scene sceneID="n9v-SE-tYH">
             <objects>
                 <navigationController id="XcM-Lp-s8F" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="met-57-fJ0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="-698" y="813"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Berlin - Narnia-->
         <scene sceneID="cQ4-LI-4IY">
             <objects>
                 <viewController id="k0K-Qr-MmX" customClass="HomeViewController" sceneMemberID="viewController">
@@ -171,7 +172,7 @@
                             <constraint firstItem="rX5-fX-vGx" firstAttribute="top" secondItem="ghu-HH-YeF" secondAttribute="bottom" id="pM5-p9-E35"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hMW-KM-DDB"/>
+                    <navigationItem key="navigationItem" title="Berlin - Narnia" id="hMW-KM-DDB"/>
                     <connections>
                         <outlet property="pageSelectorView" destination="ghu-HH-YeF" id="8Qy-rH-XPf"/>
                     </connections>

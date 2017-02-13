@@ -8,6 +8,7 @@
 
 #import "PageSelectorView.h"
 #import <pop/POP.h>
+#import "Config.h"
 
 @implementation PageSelectorView {
     NSMutableArray<UIButton *>* _buttons;
@@ -36,7 +37,7 @@
 }
 
 - (void)commonInit {
-    self.backgroundColor = [UIColor colorWithRed:17/255. green:99/255. blue:162/255. alpha:1.0];
+    self.backgroundColor = kBlueColor;
     
     _selectedMarker = [[UIView alloc] initWithFrame:CGRectZero];
     _selectedMarker.backgroundColor = [UIColor whiteColor];
