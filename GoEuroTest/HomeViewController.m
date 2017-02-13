@@ -71,9 +71,7 @@
         NSUInteger index = [_viewControllers indexOfObject:pageViewController.viewControllers[0]];
         
         if (index != NSNotFound) {
-            NSLog(@"");
             [_pageSelectorView setSelectedIndex: index];
-            //return _viewControllers[index + 1];
         }
     }
 }

@@ -50,4 +50,16 @@ import Foundation
         return URL(string: urlString)
     }
     
+    func numberOfStopsDescription() -> String {
+        if numberOfStops == 0 {
+            return "Direct"
+        }
+        
+        if numberOfStops % 10 == 1 {
+            return "\(numberOfStops) change"
+        }
+        
+        return "\(numberOfStops) changes"
+    }
+    
 }

@@ -17,6 +17,8 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView* logoImageView;
 
+@property (nonatomic, weak) IBOutlet UIView* separator;
+
 - (void)updateWithModel:(TimeTableEntity *) timeTableEntity;
 
 @end

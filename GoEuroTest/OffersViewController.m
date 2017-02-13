@@ -84,7 +84,14 @@
 #pragma mark UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectItemAtIndexPath");
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:@"Not implemented yet!"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end
